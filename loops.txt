@@ -1,0 +1,18 @@
+#Loops
+Input Format
+
+The first and only line contains the integer, .
+
+Output Format
+
+Print  lines, one corresponding to each .
+
+Sample Input 0
+
+5
+
+code:
+
+n = int(input())
+for i in range(0,n):
+    print(i**2)
