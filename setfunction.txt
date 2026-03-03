@@ -1,0 +1,22 @@
+#Set Functions
+#pop(),dicard(),remove()
+
+n = int(input())
+s = set(map(int, input().split()))
+n1=int(input())
+s1=[]
+for i in range(n1):
+    s1.append(input())
+for i in s1:
+    if i=="pop":
+        s.pop()
+    elif i[0]=="r":
+        s2=i.split()
+        s.remove(int(s2[1]))
+    elif i[0]=="d":
+        s3=i.split()
+        s.discard(int(s3[1]))
+o=0
+for i in s:
+    o+=i
+print(o)

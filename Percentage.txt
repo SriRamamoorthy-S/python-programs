@@ -1,0 +1,54 @@
+#finding percentage
+Input Format
+
+The first line contains the integer , the number of students' records. 
+The next  lines contain the names and marks obtained by a student, each value separated by a space.
+ The final line contains query_name, the name of a student to query.
+
+Output Format
+
+Print one line: The average of the marks obtained by the particular student correct to 2 decimal places.
+
+Sample Input 0
+
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+Sample Output 0
+
+56.00
+Explanation 0
+
+Marks for Malika are  whose average is 
+
+Sample Input 1
+
+2
+Harsh 25 26.5 28
+Anurag 26 28 30
+Harsh
+Sample Output 1
+
+26.50
+
+code:
+
+n=int(input())
+d={}
+for i in range(n):
+    s=input()
+    s1=s.split()
+    d1={s1[0]:[float(x) for x in s1[1:]]}
+    d.update(d1)
+
+na=input()
+for i in d:
+    if i==na:
+        a=d[i]
+s2=0
+for i in a:
+    s2+=i
+avg=s2/(len(a))
+print(f"{avg:.2f}")

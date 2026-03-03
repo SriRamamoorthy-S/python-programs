@@ -1,0 +1,13 @@
+#If Else sample
+
+n1=int(input())
+if n1%2!=0:
+    print("Weird")
+elif ((n1<5)&(n1>2)):
+    print("Not Weird")
+elif (n1<20)&(n1>6):
+    print("Weird")
+elif(n1>20):
+    print("Not Weird")
+elif(n1==20):
+     print("Weird")
