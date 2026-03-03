@@ -1,0 +1,41 @@
+#Find runner up score
+Input Format
+
+The first line contains . The second line contains an array   of  integers each separated by a space.
+
+Constraints
+2<=n<=10
+-100<=a[i]<=100
+
+Output Format
+
+Print the runner-up score.
+
+Sample Input 0
+
+5
+2 3 6 6 5
+Sample Output 0
+
+5
+Explanation 0
+
+Given list is . The maximum score is , second maximum is . Hence, we print  as the runner-up score.
+
+
+
+
+
+n=int(input())
+b=-100
+a = input().split()
+for i in a:
+    if(int(i)>b):
+        b=int(i)
+#print(b)
+c=-100
+for i in a:
+    if(int(i)>c):
+        if(int(i)<b):
+            c=int(i)
+print(c)
