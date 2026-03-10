@@ -1,0 +1,31 @@
+Consider a list (list = []). You can perform the following commands:
+
+insert i e: Insert integer  at position .
+print: Print the list.
+remove e: Delete the first occurrence of integer .
+append e: Insert integer  at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+
+
+Code:
+
+N = int(input())
+a1=[]
+for i in range(N):
+    a=input().split()
+    if a[0]=='insert':
+        a1.insert(int(a[1]),int(a[2]))
+    elif a[0]=='print':
+        print(a1)
+    elif a[0]=='append':
+        a1.append(int(a[1]))
+    elif a[0]=='remove':
+        a1.remove(int(a[1]))
+    elif a[0]=='sort':
+        a1.sort()
+    elif a[0]=='pop':
+        a1.pop()
+    elif a[0]=='reverse':
+        a1.reverse()
