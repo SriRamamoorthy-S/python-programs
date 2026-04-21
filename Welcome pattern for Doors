@@ -1,0 +1,15 @@
+# Read N and M from input
+n, m = map(int, input().split())
+
+# Top Half
+for i in range(1, n, 2):
+    pattern = ".|." * i
+    print(pattern.center(m, "-"))
+
+# Middle Line
+print("WELCOME".center(m, "-"))
+
+# Bottom Half (Reversed order of top half)
+for i in range(n-2, -1, -2):
+    pattern = ".|." * i
+    print(pattern.center(m, "-"))
