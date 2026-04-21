@@ -1,0 +1,14 @@
+def print_formatted(number):
+    # Calculate the width based on the binary of the largest number
+    # bin(number) returns '0b...', so we slice from index 2
+    width = len(bin(number)[2:])
+
+    for i in range(1, number + 1):
+        # Generate formatted strings for each representation
+        # d: decimal, o: octal, X: capitalized hex, b: binary
+        # The '>' symbol ensures right-alignment with the specified width
+        print(f"{i:>{width}} {i:>{width}o} {i:>{width}X} {i:>{width}b}")
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
