@@ -1,0 +1,24 @@
+import string
+
+def print_rangoli(size):
+    # Get all lowercase letters
+    alphabet = string.ascii_lowercase
+    
+    # Calculate max width of the rangoli
+    width = (size * 4) - 3
+    lines = []
+
+    for i in range(size):
+        # Slice alphabet for the current row: from 'size-1' down to 'i'
+        # e.g., if size=3 and i=0: 'c-b-a-b-c'
+        s = "-".join(alphabet[size - 1 : i : -1] + alphabet[i : size])
+        lines.append(s.center(width, "-"))
+
+    # Join top half, the middle, and the mirrored top half
+    # lines[::-1] is the top half, lines[1:] is the bottom half
+    print('\n'.join(lines[::-1] + lines[1:]))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+
