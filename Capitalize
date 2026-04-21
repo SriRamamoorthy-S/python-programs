@@ -1,0 +1,14 @@
+def solve(s):
+    # Split the string by spaces to keep the structure
+    # We iterate through each word and use .capitalize()
+    # .capitalize() turns "alison" -> "Alison" and "12abc" -> "12abc"
+    words = s.split(' ')
+    capitalized_words = [word.capitalize() for word in words]
+    
+    # Join back with a single space to maintain original spacing
+    return ' '.join(capitalized_words)
+
+if __name__ == '__main__':
+    s = input()
+    result = solve(s)
+    print(result)
